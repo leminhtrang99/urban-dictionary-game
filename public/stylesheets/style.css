@@ -31,14 +31,16 @@ a {
 .card:hover {
   cursor: pointer;
   background-color: #9CC4B2;
+  outline-color: #9CC4B2;
 }
 
-.card:disabled{
+/* .card:disabled {
   background-color: #96BE8C;
-}
+  outline-color: #96BE8C;
+} */
 
 .card:default{
-  background-color:"#FFFFFF";
+  background-color:#FFFFFF;
 }
 
 /* .card:active::after{
@@ -61,14 +63,34 @@ a {
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
-  
+
 }
 
-.apply-shake {
+/* .apply-shake {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   background-color: #D5BBB1;
-}
+} */
 
 /* .unmatch {
   background-color: #FFFFFF !important;
 } */
+
+.selected {
+  background-color: #86A899;
+}
+
+.matched {
+  background-color: #96BE8C !important;
+  outline-color: #96BE8C !important;
+}
+
+.unmatched {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  background-color: #D5BBB1 !important;
+  outline-color:  #D5BBB1 !important;
+}
+
+:disabled{
+  background-color: #96BE8C !important;
+  outline-color: #96BE8C !important;
+}
