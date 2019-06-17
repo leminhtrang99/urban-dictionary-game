@@ -114,7 +114,6 @@ var selectDef = function() {
        //console.log("curr def length: " + selectedDefs.length);
        //console.log("current def: " + selectedDefs[0].innerHTML.toString());
        //console.log(i);
-       
    }
    matchWords();
 }

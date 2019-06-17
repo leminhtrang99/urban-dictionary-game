@@ -1,98 +1,97 @@
 extends layout
 
 block content
-  h1 Match the slangs
-  div(class="container container-input")
-    button(class="button" id="newwords") New Words
+  .container
+    h1(class="title" style="bold") match the slangs
+  div(class="container")
+    button(type="button" class="btn btn-primary" id="newwords") new words
+  div(class="container")
+    div(class="row")
+      div(class="col")
+        div(class="label") Words
+        div(class="card-columns")
+          div(class="card word" id="wordcard0")
+            div(class="card-body")
+              h5(class="card-tile" id="word0")
 
-  div(class="row")
-    div(class="column")
-      div(class="card-columns")
-        div(clas="label") Words
+          div(class="card word" id="wordcard1")
+            div(class="card-body")
+              h5(class="card-tile" id="word1")
 
-        div(class="card word" id="wordcard0")
-          div(class="card-body")
-            h5(class="card-tile" id="word0")
+          div(class="card word" id="wordcard2")
+            div(class="card-body")
+              h5(class="card-tile" id="word2")
 
-        div(class="card word" id="wordcard1")
-          div(class="card-body")
-            h5(class="card-tile" id="word1")
+          div(class="card word" id="wordcard3")
+            div(class="card-body")
+              h5(class="card-tile" id="word3")
 
-        div(class="card word" id="wordcard2")
-          div(class="card-body")
-            h5(class="card-tile" id="word2")
+          div(class="card word" id="wordcard4")
+            div(class="card-body")
+              h5(class="card-tile" id="word4") 
 
-        div(class="card word" id="wordcard3")
-          div(class="card-body")
-            h5(class="card-tile" id="word3")
+          div(class="card word" id="wordcard5") 
+            div(class="card-body")
+              h5(class="card-tile" id="word5")
 
-        div(class="card word" id="wordcard4")
-          div(class="card-body")
-            h5(class="card-tile" id="word4") 
+          div(class="card word" id="wordcard6")
+            div(class="card-body")
+              h5(class="card-tile" id="word6")
 
-        div(class="card word" id="wordcard5") 
-          div(class="card-body")
-            h5(class="card-tile" id="word5")
+          div(class="card word" id="wordcard7")
+            div(class="card-body")
+              h5(class="card-tile" id="word7") 
 
-        div(class="card word" id="wordcard6")
-          div(class="card-body")
-            h5(class="card-tile" id="word6")
+          div(class="card word" id="wordcard8")
+            div(class="card-body")
+              h5(class="card-tile" id="word8") 
 
-        div(class="card word" id="wordcard7")
-          div(class="card-body")
-            h5(class="card-tile" id="word7") 
+          div(class="card word" id="wordcard9")
+            div(class="card-body")
+              h5(class="card-tile" id="word9") 
 
-        div(class="card word" id="wordcard8")
-          div(class="card-body")
-            h5(class="card-tile" id="word8") 
+      div(class="col")
+        div(class="label") Definitions
+        div(class="card-columns")
+          div(class="card definition" id="definitioncard0")
+            div(class="card-body")
+              p(class="card-text" id="definition0")
 
-        div(class="card word" id="wordcard9")
-          div(class="card-body")
-            h5(class="card-tile" id="word9") 
+          div(class="card definition" id="definitioncard1") 
+            div(class="card-body")
+              p(class="card-text" id="definition1")
 
-    div(class="column")
-      div(class="card-columns")
-        div(class="labels") Definitions
+          div(class="card definition" id="definitioncard2") 
+            div(class="card-body")
+              p(class="card-text" id="definition2")
 
-        div(class="card definition" id="definitioncard0")
-          div(class="card-body")
-            p(class="card-text" id="definition0")
+          div(class="card definition" id="definitioncard3")
+            div(class="card-body")
+              p(class="card-text" id="definition3") 
 
-        div(class="card definition" id="definitioncard1") 
-          div(class="card-body")
-            p(class="card-text" id="definition1")
+          div(class="card definition" id="definitioncard4")
+            div(class="card-body")
+              p(class="card-text" id="definition4")
 
-        div(class="card definition" id="definitioncard2") 
-          div(class="card-body")
-            p(class="card-text" id="definition2")
+          div(class="card definition" id="definitioncard5")
+            div(class="card-body")
+              p(class="card-text" id="definition5") 
 
-        div(class="card definition" id="definitioncard3")
-          div(class="card-body")
-            p(class="card-text" id="definition3") 
+          div(class="card definition" id="definitioncard6")
+            div(class="card-body")
+              p(class="card-text" id="definition6") 
 
-        div(class="card definition" id="definitioncard4")
-          div(class="card-body")
-            p(class="card-text" id="definition4")
+          div(class="card definition" id="definitioncard7")
+            div(class="card-body")
+              p(class="card-text" id="definition7")
 
-        div(class="card definition" id="definitioncard5")
-          div(class="card-body")
-            p(class="card-text" id="definition5") 
+          div(class="card definition" id="definitioncard8")
+            div(class="card-body")
+              p(class="card-text" id="definition8")
 
-        div(class="card definition" id="definitioncard6")
-          div(class="card-body")
-            p(class="card-text" id="definition6") 
-
-        div(class="card definition" id="definitioncard7")
-          div(class="card-body")
-            p(class="card-text" id="definition7")
-
-        div(class="card definition" id="definitioncard8")
-          div(class="card-body")
-            p(class="card-text" id="definition8")
-
-        div(class="card definition" id="definitioncard9")
-          div(class="card-body")
-            p(class="card-text" id="definition9")
+          div(class="card definition" id="definitioncard9")
+            div(class="card-body")
+              p(class="card-text" id="definition9")
   
   
   .container
