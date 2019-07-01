@@ -34,7 +34,7 @@ function shuffle(array) {
 let randomButton = document.getElementById("newwords");
 
 
-randomButton.onclick = function generateWords(){
+randomButton.onclick = async function generateWords(){
     wordList = [];
     defList = [];
     wordButtons=[];
@@ -42,7 +42,7 @@ randomButton.onclick = function generateWords(){
     wordMap = new Map();
     selectedWords=[];
     selectedDefs=[];
-    fetch(randomUrl)
+    await fetch(randomUrl)
         .then(response => {
             return response.json();
         })
