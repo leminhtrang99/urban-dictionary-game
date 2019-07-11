@@ -1,15 +1,14 @@
 body {
-  padding: 50px;
+  padding: 30px;
   font: 14px "Futura", Helvetica, Arial, sans-serif;
   background-color: #e8dfe0;
-
 }
 
 a {
   color: #00B7FF;
 }
 
-.row{
+.row {
   margin:20px;
 }
 
@@ -40,7 +39,9 @@ a {
   outline-color: #FFFFFF;
 }
 
-.card-text{
+
+
+ /* .card-text{
   overflow: hidden;
   display: block;
   height: 40px;
@@ -51,35 +52,39 @@ a {
 .card-text:hover {
   transition: all .2s ease;
   height: auto;
+} */
+
+.card.definition{
+  height: auto;
 }
-
-
 
 
 .selected {
   background-color: #BA9B7C !important;
-  border: #BA9B7C !important;
+  outline-color: #BA9B7C !important;
 }
 
 .matched {
   background-color: #8d9b6a !important;
-  border: #8d9b6a !important;
+  outline-color: #8d9b6a !important;
   cursor: default !important;
+ 
 }
 
 .unmatched {
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
   background-color: #F27171 !important;
-  border:  #F27171 !important;
+  outline-color:  #F27171 !important;
 }
 
 :disabled{
-  background-color: #96BE8C !important;
-  border: #96BE8C !important;
+  /* background-color: #96BE8C !important;
+  outline-color: #96BE8C !important; */
+  /* animation:none; */
 }
 
 .btn-primary{
-  display: block;
+  display: block; 
   background-color: #8A9EA7;
   border-color: #8A9EA7;
   border-radius: 0;
@@ -138,4 +143,16 @@ a {
   }
 
 }
+/* 
+#wordColumn {
+  border-right: solid salmon 2px;
+}
 
+#gameBoard {
+  height: 1000px;
+} */
+
+/* .container{
+  margin-right:2%;
+  margin-left:2%;
+} */

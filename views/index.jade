@@ -7,9 +7,9 @@ block content
     button(type="button" class="btn btn-primary" id="newwords") new words
   div(class="container")
     div(class="row")
-      div(class="col")
-        div(class="label") Words
-        div(class="card-columns")
+      div(class="col" id="wordColumn")
+        h2(class="label") Words
+        div(class="card-columns" )
           div(class="card word" id="wordcard0")
             div(class="card-body")
               h5(class="card-tile" id="word0")
@@ -51,7 +51,7 @@ block content
               h5(class="card-tile" id="word9") 
 
       div(class="col")
-        div(class="label") Definitions
+        h2(class="label") Definitions
         div(class="card-columns")
           div(class="card definition" id="definitioncard0")
             div(class="card-body")

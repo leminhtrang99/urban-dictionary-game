@@ -10,6 +10,8 @@ let selectedWords=[];
 let selectedDefs=[];
 var wordMap;
 
+$(document).ready(generateWords);
+
 function shuffle(array) {
   var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -31,10 +33,9 @@ function shuffle(array) {
 
 
 //Fetch random words from Urban Dictionary API
-let randomButton = document.getElementById("newwords");
+document.getElementById("newwords").addEventListener('click', generateWords);
 
-
-randomButton.onclick = async function generateWords(){
+function generateWords(){
     wordList = [];
     defList = [];
     wordButtons=[];
@@ -42,7 +43,7 @@ randomButton.onclick = async function generateWords(){
     wordMap = new Map();
     selectedWords=[];
     selectedDefs=[];
-    await fetch(randomUrl)
+    fetch(randomUrl)
         .then(response => {
             return response.json();
         })
@@ -72,8 +73,6 @@ randomButton.onclick = async function generateWords(){
             var defs = document.getElementsByClassName('card definition');
             defButtons = [...defs];
             for (var i = 0; i < wordButtons.length; i++) {
-            // wordButtons[i].reset();
-            // defButtons[i].reset();
             wordButtons[i].addEventListener("click", selectWord);
             defButtons[i].addEventListener("click", selectDef);
             wordButtons[i].classList.remove("selected", "matched", "disabled");
@@ -86,7 +85,6 @@ randomButton.onclick = async function generateWords(){
 }
 
 var selectWord = function(){
-   //this.style.backgroundColor="#86A899";
    this.classList.toggle('selected');
    this.classList.toggle('disabled');
        
@@ -124,7 +122,9 @@ let unmatchedWords = [];
 let unmatchedDefs = [];
 let matchedButtons=[]; 
 function matchWords() {
-    if(wordMap.size===0) console.log("game over");
+    if(wordMap.size===0) {console.log("game over");
+    generateWords();
+    }
     if (selectedDefs.length===1 && selectedWords.length===1) {
 
         currentWord = selectedWords[0].getElementsByClassName('card-body')[0].getElementsByTagName('H5')[0].innerHTML;
